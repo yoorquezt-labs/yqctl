@@ -3,7 +3,7 @@ COMMIT  ?= $(shell git rev-parse --short HEAD 2>/dev/null || echo "unknown")
 DATE    ?= $(shell date -u '+%Y-%m-%dT%H:%M:%SZ')
 LDFLAGS := -s -w -X main.version=$(VERSION) -X main.commit=$(COMMIT) -X main.date=$(DATE)
 
-.PHONY: build install clean test lint release snapshot
+.PHONY: build install clean test lint release snapshot npm-publish npm-update-version
 
 build:
 	go build -ldflags "$(LDFLAGS)" -o bin/yqctl .
@@ -25,3 +25,10 @@ release:
 
 snapshot:
 	goreleaser release --snapshot --clean
+
+# npm package management
+npm-publish:
+	cd npm && npm publish --access public
+
+npm-update-version:
+	cd npm && npm version $(VERSION)

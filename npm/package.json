@@ -1,0 +1,35 @@
+{
+  "name": "yqctl",
+  "version": "0.1.0",
+  "description": "CLI for the YoorQuezt MEV gateway — submit bundles, protect transactions, stream events",
+  "keywords": [
+    "mev",
+    "ethereum",
+    "defi",
+    "cli",
+    "yoorquezt",
+    "bundle",
+    "arbitrage",
+    "websocket",
+    "json-rpc"
+  ],
+  "homepage": "https://github.com/yoorquezt-labs/yqctl",
+  "bugs": {
+    "url": "https://github.com/yoorquezt-labs/yqctl/issues"
+  },
+  "license": "MIT",
+  "author": "YoorQuezt Labs <eng@yoorquezt.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yoorquezt-labs/yqctl.git"
+  },
+  "bin": {
+    "yqctl": "./bin/yqctl"
+  },
+  "scripts": {
+    "postinstall": "node install.js"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}

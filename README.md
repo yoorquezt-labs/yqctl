@@ -4,6 +4,12 @@ CLI for the [YoorQuezt MEV](https://github.com/yoorquezt-labs) gateway. Submit b
 
 ## Install
 
+### npm
+
+```bash
+npm install -g yqctl
+```
+
 ### Homebrew
 
 ```bash
